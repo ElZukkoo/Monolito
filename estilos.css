@@ -1,0 +1,397 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado con fondo oscuro y logo */
+header {
+    background-color: #000;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header .logo span {
+    font-size: 14px;
+    display: block;
+    opacity: 0.7;
+}
+
+/* Navegación principal */
+nav {
+    display: block;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-right: 50px;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Contenedor principal */
+main {
+    padding: 80px 20px 40px;
+    text-align: center;
+}
+
+/* Sección de productos */
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.tarjeta h3 {
+    margin: 15px 0;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.tarjeta p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
+
+/* Sección destacada */
+.destacados {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.destacados img {
+    width: 100px;
+    height: auto;
+}
+
+/* Pie de página */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+}
+/* Sección de descripción con imagen de fondo */
+.descripcion {
+    background: url('fondo2.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.descripcion h2, .descripcion p {
+    margin: 20px 0;
+}
+
+/* Variables de color (opcional) */
+:root {
+    --primary-color: #3498db;
+    --primary-hover: #2980b9;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --border-color: #e2e8f0;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-color);
+    padding: 20px;
+}
+    
+
+/* Contenedor principal */
+.login-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Logo (descomenta si lo usas) */
+.login-logo {
+    width: 120px;
+    margin-bottom: 1.5rem;
+}
+
+/* Título */
+.login-title {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Formulario */
+.login-form {
+    margin-top: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Botón */
+.login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Footer (texto de registro) */
+.login-footer {
+    margin-top: 1.5rem;
+    color: #718096;
+}
+
+.login-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== VARIABLES (Usa las mismas que en login) ===== */
+:root {
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --text: #1e293b;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+    --error: #dc2626;
+    --radius: 0.5rem;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ===== ESTILOS REGISTRO ===== */
+  body.page-registro {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.25rem;
+    color: var(--text);
+  }
+  
+  .register-container {
+    background: white;
+    width: 100%;
+    max-width: 28rem;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  
+  .register-title {
+    color: var(--text);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .register-form {
+    margin-top: 1.5rem;
+  }
+  
+  /*.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-light);
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .form-input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }*/
+  
+  .register-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .register-button:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .register-button:active {
+    background-color: var(--primary-active);
+  }
+  
+  .register-footer {
+    margin-top: 1.5rem;
+    color: var(--text-light);
+  }
+  
+  .register-link {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .register-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos para errores */
+  .error-message {
+    color: var(--error);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    display: block;
+  }

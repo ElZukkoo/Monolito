@@ -1,0 +1,116 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aitzaloa - Tu Tienda de Computadoras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e7f1f9;
+            color: #003366;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #004d99;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        h2 {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Aitzaloa - Tu Tienda de confianza</h1>
+</header>
+
+<nav>
+    <a href="#usuario">Módulos de Usuario</a>
+    <a href="#productos">Módulos de Productos</a>
+    <a href="#carrito">Carrito de Compras</a>
+    <a href="#pedidos">Pedidos</a>
+    <a href="#pagos">Pagos</a>
+    <a href="#mision>Misión y Visión</a>
+</nav>
+
+<main>
+    <div id="usuario" class="container">
+        <h2>Módulos de Usuario</h2>
+        <p><a href="registro.php">Gestiona el Registro</a></p>
+        <p><a href="inicio_sesion.php">Iniciar Sesión</a></p>
+        <p><a href="perfil.php">Perfil de Usuario</a></p>
+    </div>
+
+    <div id="productos" class="container">
+        <h2>Módulos de Productos</h2>
+        <p><a href="catalogo.php">Ver Catálogo de Productos</a></p>
+        <p><a href="categorias.php">Gestionar Categorías</a></p>
+        <p><a href="detalles_producto.php">Ver Detalles del Producto</a></p>
+    </div>
+
+    <div id="carrito" class="container">
+        <h2>Carrito de Compras</h2>
+        <p><a href="carrito.php">Ver y Modificar el Carrito</a></p>
+    </div>
+
+    <div id="pedidos" class="container">
+        <h2>Módulo de Pedidos</h2>
+        <p><a href="procesar_pedido.php">Procesar Pedidos</a></p>
+    </div>
+
+    <div id="pagos" class="container">
+        <h2>Módulo de Pagos</h2>
+        <p><a href="pago.php">Integrar Sistema de Pagos</a></p>
+    </div>
+
+    <div id="mision" class="container">
+        <h2>Misión y Visión</h2>
+        <p><strong>Misión:</strong> Ofrecer productos tecnológicos de calidad y soluciones innovadoras para computadoras, brindando a nuestros clientes una experiencia de compra eficiente y segura.</p>
+        <p><strong>Visión:</strong> Ser la empresa líder en el mercado de tecnología, reconocida por su compromiso con la satisfacción del cliente, la innovación y la calidad de nuestros productos.</p>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Aitzaloa - Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
